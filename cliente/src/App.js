@@ -1,6 +1,8 @@
+import Routing from "./routing/Routing";
+
 const App = () => {
   return(
-    <h1> AFC VIRTUAL </h1>
+    <Routing />
   )
 }
 
