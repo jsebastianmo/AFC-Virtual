@@ -7,10 +7,10 @@ const Routing = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element= {<Principal />} />
-                <Route path="/principal" element= {<Principal />} />
-                <Route path="/acerca" element= {<AcercaDe />} />
-                <Route path="/*" element= {<Pagina404 />} />
+                <Route path="/" element = {<Principal />} />
+                <Route path="/principal" element = {<Principal />} />
+                <Route path="/acerca" element = {<AcercaDe />} />
+                <Route path="/*" element = {<Pagina404 />} />
             </Routes>
         </BrowserRouter>
     )
