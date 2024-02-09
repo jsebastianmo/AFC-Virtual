@@ -10,7 +10,7 @@ const Routing = () => {
                 <Route path="/" element = {<AcercaDe />} />
                 <Route path="/principal" element = {<Principal />} />
                 <Route path="/acerca" element = {<AcercaDe />} />
-                <Route path="/*" element = {<Pagina404 />} />
+                {/* <Route path="/*" element = {<Pagina404 />} /> */}
             </Routes>
         </BrowserRouter>
     )
