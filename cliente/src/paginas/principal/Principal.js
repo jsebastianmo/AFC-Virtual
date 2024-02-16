@@ -9,7 +9,7 @@ const Principal = () => {
     <>
       <div className="d-flex flex-column vh-100">
         <HeaderLanding />
-        <section className='vh-100 position-relative'>
+        <section className='vh-100 position-relative inicio'>
           <StickyMenu />
           <HomeLanding />
           <BottomHome />
