@@ -19,43 +19,6 @@
     display: none;
 }
 
-@media (max-width: 992px) {
-    .header-screens{
-        width: 90%;
-        margin: 0px auto;
-    }
-
-    .brand {
-        display: block;
-    }
-
-    .custom-border {
-        border: none;
-    }
-
-    .carousel-item .caja-carrusel{
-        width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .bottom-home{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .pie-home{
-        position: relative;
-        top: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-  }
-
 .header-landing .login-register .login{
     display: block;
     color: #555;
@@ -87,6 +50,25 @@
     right: 0;
 }
 
+/* Clase adicional para cambiar el color de fondo al hacer scroll hacia abajo */
+.sticky-scrolled {
+    background-color: black;
+    animation: deslizar-sticky 300ms linear;
+}
+
+@keyframes deslizar-sticky {
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+
+.sticky-top .navbar-brand h5{
+    color: white;
+}
+
 .sticky-top .navbar-nav {
     margin-left: auto;
     margin-right: 0px !important;
@@ -94,6 +76,11 @@
 
 .sticky-top .navbar-toggler{
     margin-left: auto;
+}
+
+.sticky-top .collapse .nav-item .nav-link{
+    display: block;
+    color: white;
 }
 
 .sticky-top .nav-item a:hover{
@@ -213,4 +200,540 @@
 
   .contenido a:hover{
     color: #6c757d;
+  }
+
+  /* ESTILO DE LOS CURSOS */
+  .cursosLanding{
+    position: relative;
+  }
+  
+  .cursos-landing{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .cursos-landing .curso-landing{
+    flex: 0 0 22.8%; /* 25% para distribuir uniformemente 4 elementos en el 100% */
+    box-sizing: border-box;
+  }
+
+  .cursos-landing .curso-landing .box-imagen {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .cursos-landing .curso-landing .box-imagen .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: rgba(255, 175, 30, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  .cursos-landing .curso-landing:hover .box-imagen .overlay{
+    transform: translateY(0);
+  }
+
+  .cursos-landing .curso-landing .card-body div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .cursos-landing .curso-landing .card-body h1, .cursos-landing .curso-landing .card-body div p, .cursos-landing .curso-landing .card-footer .informacion .people, .cursos-landing .curso-landing .card-footer .informacion .chat{
+    transition: all 300ms;
+  }
+
+  .cursos-landing .curso-landing .card-body h1:hover, .cursos-landing .curso-landing .card-body div p:hover{
+    cursor: pointer;
+    color: #FFD700;
+  }
+
+  .cursos-landing .curso-landing .card-footer .informacion .people:hover, .cursos-landing .curso-landing .card-footer .informacion .chat:hover{
+    cursor: pointer;
+    color: aqua;
+  }
+
+  .controles{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .controles .flechas .box{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #6c757d;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .controles .flechas .box:hover{
+    background: rgb(7, 134, 219);
+  }
+
+  .controles .flechas .box:hover .flecha{
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+  }
+
+  .controles .flechas .flecha{
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    margin-left: calc(50% - 7px);
+    transform: rotate(135deg);
+  }
+
+  .controles .flechas .izquierda{
+      margin-left: calc(50% - 3px);
+      transform: rotate(-45deg);
+  }
+
+  /* Estilos estadisticas landing page */
+  .estadisticas{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(https://picsum.photos/700/400?1) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+  }
+
+  .estadisticas .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .estadisticas .items .item{
+    color: white;
+  }
+
+  .estadisticas .items .item .progress{
+    width: 35%;
+    height: 4px;
+  }
+
+  .estadisticas .items .item .progress-bar{
+    width: 100%;
+  }
+
+  /* Estilos eventos landing page */
+  .eventos{
+    width: 100%;
+  }
+
+  .eventos .articles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventos .articles .heading{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .eventos .articles .heading .progress{
+    width: 15%;
+    height: 4px;
+  }
+
+  .eventos .articles .heading .progress-bar{
+    width: 100%;
+  }
+
+  .eventos .articles .heading .content-right{
+    height: 100%;
+  }
+
+  .eventos .articles .article{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .eventos article{
+    border-bottom: 1px solid #e3e0e0;
+  }
+
+  .eventos .last, .eventos .heading{
+    border-bottom: none
+  }
+
+  .eventos .articles .article .content-left{
+    width: 75%;
+    display: flex;
+    gap: 100px;
+  }
+
+  .eventos .articles .article .content-left .dia .dia-mes{
+    color: #6c757d;
+    font-size: 15px;
+    font-weight: lighter;
+    margin: 0;
+  }
+
+  .eventos .articles .article .content-left .dia h1, .eventos .articles .article .content-left .dia p{
+    margin: 0;
+  }
+
+  .eventos .articles .article .content-left .dia .dia-mes .dia-numero{
+    display: inline-block;
+    font-size: 50px;
+    font-weight: normal;
+  }
+
+  .eventos .articles .article .content-left .dia .dia-semana{
+    color: #6c757d;
+    font-size: 45px;
+    font-weight: lighter;
+    margin: 0;
+  }
+
+  .eventos .articles .article .content-left .detalle h1:hover{
+    color: #FFD700;
+    cursor: pointer;
+  }
+
+  .eventos .articles .article .content-left .detalle a:hover{
+    background-color: #FFD700;
+    color: white;
+    border: none;
+  }
+
+  .eventos .articles .article .content-right{
+    width: 25%;
+  }
+
+  .eventos .articles .article .content-right img {
+    width: 100%;
+  }
+
+  /* Estilos buscador de cursos */
+  .buscador{
+    background-color: #f6f3f3;
+  }
+
+  .buscador .select option:first-child {
+    color: #e3e0e0;
+  }
+
+  .buscador .select option:hover {
+    background-color: #FFD700;
+  }
+
+  /* Estilos Categorias landing page */
+  .categorias{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(https://picsum.photos/700/400?3) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+  }
+
+  .categorias .items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .categorias .items .item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 7%;
+    cursor: pointer;
+  }
+
+  .categorias .items .item:hover{
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid #FFD700;
+  }
+
+  .categorias .items .item i{
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .categorias .items .item p{
+    margin: 0;
+  }
+
+  /* Estilo opiniones */
+  .opiniones{
+    width: 100%;
+  }
+
+  .opiniones .articles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .opiniones .articles .article{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .opiniones article{
+    border-bottom: 1px solid #e3e0e0;
+  }
+
+  .opiniones .articles .article .content-left{
+    width: 80%;
+    display: flex;
+    gap: 100px;
+  }
+
+  .eventos .articles .article .content-left .detalle h1:hover{
+    color: #FFD700;
+    cursor: pointer;
+  }
+
+  .eventos .articles .article .content-left img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /* Estilo de las noticas */
+  .noticias{
+    position: relative;
+  }
+  
+  .noticias-landing{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .noticias-landing .noticia-landing{
+    flex: 0 0 30%; /* 25% para distribuir uniformemente 4 elementos en el 100% */
+    box-sizing: border-box;
+  }
+
+  .noticias-landing .noticia-landing .box-imagen {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .noticias-landing .noticia-landing .box-imagen .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: rgba(255, 175, 30, 0.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  .noticias-landing .noticia-landing:hover .box-imagen .overlay{
+    transform: translateY(0);
+  }
+
+  .noticias-landing .noticia-landing .card-body div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .noticias-landing .noticia-landing .card-body h1, .noticias-landing .noticia-landing .card-body div p{
+    transition: all 300ms;
+  }
+
+  .noticias-landing .noticia-landing .card-body h1:hover, .noticias-landing .noticia-landing .card-body div p:hover{
+    cursor: pointer;
+    color: #FFD700;
+  }
+
+  .noticias-landing .noticia-landing .card-body p span:hover{
+    cursor: pointer;
+    color: #FFD700;
+  }
+
+  /* Estilos del footer */
+  .footer-landing{
+    height: 450px;
+  }
+
+  .footer-landing .main{
+    width: 100%;
+    border-bottom: 1px solid #6c757d;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap: 20px;
+    overflow: hidden;
+  }
+
+  .footer-landing .main .seccion{
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .footer-landing .main .seccion-1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-landing .main .seccion-2 h1, .footer-landing .main .seccion-3 h1, .footer-landing .main .seccion-4 h1{
+    border-bottom: 1px solid #6c757d;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer .image-overlay{
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer .image-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-100%);
+    background-color: rgba(255, 175, 30, 0.5);
+    transition: all 300ms linear;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer:hover .image-overlay .overlay{
+    transform: translateX(0%);
+    color: aqua;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer .image-overlay img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer span{
+    color: aqua;
+  }
+
+  .footer-landing .main .seccion-2 .cursos-footer .article-footer p{
+    margin: 0;
+  }
+
+  .footer-landing .main .seccion-3 ul, .footer-landing .main .seccion-4 ul{
+    padding: 0;
+  }
+
+  .footer-landing .main .seccion-3 ul li{
+    content: '\2022'; /* Código Unicode para un punto negro */
+    color: #6c757d; /* Cambiar el color según sea necesario */
+  }
+
+  .footer-landing .main .seccion-3 ul li a{
+    text-decoration: none;
+    display: block;
+    color: #6c757d;
+    transition: all 100ms linear;
+  }
+
+  .footer-landing .main .seccion-3 ul li a:hover{
+    color: white;
+  }
+
+  .footer-landing .main .seccion-4 ul{
+    list-style: none;
+  }
+
+  .footer-landing .main .seccion-4 ul li{
+    margin-top: 20px;
+  }
+
+  .footer-landing .main .seccion-4 ul a{
+    text-decoration: none;
+    display: block;
+    color: #6c757d;
+  }
+
+  .footer-landing .main .seccion-4 ul a i{
+    padding: 2px;
+    margin-right: 10px;
+  }
+
+  .footer-landing .main .seccion-4 ul a span{
+    transition: all 100ms linear;
+  }
+
+  .footer-landing .main .seccion-4 ul a span:hover{
+    color: aqua;
+  }
+
+  .footer-landing .derechos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .footer-landing .derechos .redes{
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer-landing .derechos .redes>i{
+    color: #6c757d;
+    transition: all 100ms linear;
+  }
+
+  .footer-landing .derechos .redes i:hover{
+    color: aqua;
+    cursor: pointer;
   }
