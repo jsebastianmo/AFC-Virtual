@@ -12,14 +12,14 @@ const FooterLanding = () => {
                         <h5 className='fs-3 brand-title text-white'> AFC </h5>
                     </NavLink>
                     <p className='text-muted'> We have over 20 years experience providing expert Educational both businesses and individuals. Our Investment Committee brings cades the industry expertise in driving our investment approach. portfolio constructor and allocation </p>
-                    <a className='btn btn-outline-secondary'> Ver más </a>
+                    <NavLink className='btn btn-outline-secondary' to='/principal'> Ver más </NavLink>
                 </section>
                 <section className='seccion seccion-2'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> Cursos populares </h1>
                     <div className='cursos-footer'>
                         <article className='article-footer'>
                             <div className='image-overlay'>
-                                <img src='https://picsum.photos/700/400?3' />
+                                <img src='https://picsum.photos/700/400?3' alt='imagen'/>
                                 <div className='overlay'></div>
                             </div>
                             <div>
@@ -29,7 +29,7 @@ const FooterLanding = () => {
                         </article>
                         <article className='article-footer'>
                             <div className='image-overlay'>
-                                <img src='https://picsum.photos/700/400?4' />
+                                <img src='https://picsum.photos/700/400?4' alt='imagen'/>
                                 <div className='overlay'></div>
                             </div>
                             <div>
@@ -39,7 +39,7 @@ const FooterLanding = () => {
                         </article>
                         <article className='article-footer'>
                             <div className='image-overlay'>
-                                <img src='https://picsum.photos/700/400?5' />
+                                <img src='https://picsum.photos/700/400?5' alt='imagen'/>
                                 <div className='overlay'></div>
                             </div>
                             <div>
@@ -52,22 +52,22 @@ const FooterLanding = () => {
                 <section className='seccion seccion-3'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> ENLACES RAPIDOS </h1>
                     <ul>
-                        <li> <NavLink> Todos los cursos </NavLink> </li>
-                        <li> <NavLink> Sesiones </NavLink> </li>
-                        <li> <NavLink> Examenes recientes </NavLink> </li>
-                        <li> <NavLink> Cursos profesionales </NavLink> </li>
-                        <li> <NavLink> Políticas de privacidad </NavLink> </li>
-                        <li> <NavLink> Términos de uso </NavLink> </li>
-                        <li> <NavLink> Contáctenos </NavLink> </li>
+                        <li> <NavLink to='/principal'> Todos los cursos </NavLink> </li>
+                        <li> <NavLink to='/principal'> Sesiones </NavLink> </li>
+                        <li> <NavLink to='/principal'> Examenes recientes </NavLink> </li>
+                        <li> <NavLink to='/principal'> Cursos profesionales </NavLink> </li>
+                        <li> <NavLink to='/principal'> Políticas de privacidad </NavLink> </li>
+                        <li> <NavLink to='/principal'> Términos de uso </NavLink> </li>
+                        <li> <NavLink to='/principal'> Contáctenos </NavLink> </li>
                     </ul>
                 </section>
                 <section className='seccion seccion-4'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> CONTÁCTENOS </h1>
                     <p className='text-muted'> Si quiere contactarnos sobre cualquier tema, nuestro soporte está disponible para ayudarlo </p>
                     <ul>
-                        <li> <NavLink> <i className="bi bi-geo-alt-fill bg-warning text-dark"></i> Address: 9015 Sunset Boulevard United Kingdom </NavLink> </li>
-                        <li> <NavLink> <i className="bi bi-telephone-fill bg-warning text-dark"></i> Call: <span> + 215 623 7532 </span> </NavLink> </li>
-                        <li> <NavLink> <i className="bi bi-envelope-fill bg-warning text-dark"></i> Email: <span> info@Studylms.com </span> </NavLink> </li>
+                        <li> <NavLink to='/principal'> <i className="bi bi-geo-alt-fill bg-warning text-dark"></i> Address: 9015 Sunset Boulevard United Kingdom </NavLink> </li>
+                        <li> <NavLink to='/principal'> <i className="bi bi-telephone-fill bg-warning text-dark"></i> Call: <span> + 215 623 7532 </span> </NavLink> </li>
+                        <li> <NavLink to='/principal'> <i className="bi bi-envelope-fill bg-warning text-dark"></i> Email: <span> info@Studylms.com </span> </NavLink> </li>
                     </ul>
                 </section>
             </section>
