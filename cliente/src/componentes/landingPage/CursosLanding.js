@@ -42,7 +42,7 @@ const CursosLanding = () => {
 					<span className="badge bg-info text-white">$99.00</span>
 					<h1 className='fs-4'> Curso 1 </h1>
 					<div className='d-flex align-items-center gap-4'>
-						<img src='https://picsum.photos/700/400?1'/>
+						<img src='https://picsum.photos/700/400?1' alt='imagen'/>
 						<p className='m-0'> Nombre instructor </p>
 					</div>
 				</div>
@@ -141,7 +141,7 @@ const CursosLanding = () => {
 					<span className="badge bg-info text-white">$99.00</span>
 					<h1 className='fs-4'> Curso 4 </h1>
 					<div className='d-flex align-items-center gap-4'>
-						<img src='https://picsum.photos/700/400?1'/>
+						<img src='https://picsum.photos/700/400?1' alt='imagen'/>
 						<p className='m-0'> Nombre instructor </p>
 					</div>
 				</div>
@@ -174,7 +174,7 @@ const CursosLanding = () => {
 					<span className="badge bg-info text-white">$99.00</span>
 					<h1 className='fs-4'> Curso 5 </h1>
 					<div className='d-flex align-items-center gap-4'>
-						<img src='https://picsum.photos/700/400?1'/>
+						<img src='https://picsum.photos/700/400?1' alt='imagen'/>
 						<p className='m-0'> Nombre instructor </p>
 					</div>
 				</div>
