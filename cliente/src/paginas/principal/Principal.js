@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import HeaderLanding from '../../componentes/landingPage/HeaderLanding';
 import StickyMenu from '../../componentes/landingPage/StickyMenu';
 import HomeLanding from '../../componentes/landingPage/HomeLanding';
