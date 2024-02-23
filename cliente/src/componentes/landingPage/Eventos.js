@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Eventos = () => {
   return (
@@ -13,7 +14,7 @@ const Eventos = () => {
                     </div>
                 </div>
                 <div className='content-right'>
-                    <a className='btn btn-outline-secondary'> Ver más </a>
+                    <NavLink className='btn btn-outline-secondary' to='/principal'> Ver más </NavLink>
                 </div>
             </article>
             <article className='article'>
@@ -25,7 +26,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 1 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <a className='btn btn-outline-secondary'> Registrarse </a>
+                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>
@@ -41,7 +42,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 2 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <a className='btn btn-outline-secondary'> Registrarse </a>
+                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>
@@ -57,7 +58,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 3 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <a className='btn btn-outline-secondary'> Registrarse </a>
+                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>
