@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const BottomHome = () => {
   return (
-    <section className='container bottom-home position-relative'>
+    <section className='bottom-home position-relative'>
         <section>
             <div className='pie-home d-flex'>
                 <div className='text-white p-4 position-relative contenido contenido-1 d-flex justify-content-around'>
