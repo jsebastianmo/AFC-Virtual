@@ -158,6 +158,11 @@
     border: none;
 }
 
+.bottom-home{
+  width: 80%;
+  margin: 0px auto;
+}
+
 .pie-home{
     position: absolute;
     bottom: 0px;
@@ -458,6 +463,7 @@
 
   .categorias .items{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
   }

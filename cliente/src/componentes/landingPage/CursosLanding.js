@@ -30,7 +30,7 @@ const CursosLanding = () => {
 	
 
   return (
-    <section className='cursosLanding container mt-5'>
+    <section className='cursosLanding container'>
 		<h1 className='mb-5'> Cursos más populares </h1>
 		<section className='cursos-landing'>
 			<div className="curso-landing card">
