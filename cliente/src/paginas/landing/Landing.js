@@ -12,7 +12,7 @@ import Opiniones from '../../componentes/landingPage/Opiniones';
 import Noticias from '../../componentes/landingPage/Noticias';
 import FooterLanding from '../../componentes/landingPage/FooterLanding';
 
-const Principal = () => {
+const Landing = () => {
 
   return (
     <>
@@ -45,4 +45,4 @@ const Principal = () => {
   )
 }
 
-export default Principal;
+export default Landing;

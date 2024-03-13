@@ -14,7 +14,7 @@ const Eventos = () => {
                     </div>
                 </div>
                 <div className='content-right'>
-                    <NavLink className='btn btn-outline-secondary' to='/principal'> Ver más </NavLink>
+                    <NavLink className='btn btn-outline-secondary' to='/landing'> Ver más </NavLink>
                 </div>
             </article>
             <article className='article'>
@@ -26,7 +26,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 1 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
+                        <NavLink className='btn btn-outline-secondary' to='/landing'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>
@@ -42,7 +42,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 2 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
+                        <NavLink className='btn btn-outline-secondary' to='/landing'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>
@@ -58,7 +58,7 @@ const Eventos = () => {
                     <div className='detalle w-75'>
                         <h1> Evento 3 </h1>
                         <p className='text-muted'> <span> 8:00 am - 5:00 pm </span> | Dirección 1, detalle</p>
-                        <NavLink className='btn btn-outline-secondary' to='/principal'> Registrarse </NavLink>
+                        <NavLink className='btn btn-outline-secondary' to='/landing'> Registrarse </NavLink>
                     </div>
                 </div>
                 <div className='content-right'>

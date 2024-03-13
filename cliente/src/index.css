@@ -743,3 +743,321 @@
     color: aqua;
     cursor: pointer;
   }
+
+/*  ESTILOS DE LA PLATAFORMA  */
+/* INICIO */
+.inicio-plataforma{
+  width: 100%;
+  display: flex;
+}
+
+.inicio-plataforma .lateral{
+  position: relative;
+  flex-basis: 20%;
+  height: 100vh;
+  display: flex;
+}
+
+.inicio-plataforma .lateral .barra-lateral{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos{
+  height: 100%;
+  background-color: #3C40C6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .indice{
+  display: block;
+  color: #fff;
+  font-size: 25px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .navegacion-lateral{
+  margin-top: 50px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .navegacion-lateral ul{
+  list-style: none;
+  padding: 0;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .navegacion-lateral ul li{
+  margin-top: 40px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .navegacion-lateral ul li a{
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  background: transparent;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  transition: all 300ms;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos{
+  flex-grow: 1;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-textos{
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #d9dadb;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos h1{
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #3C40C6;
+  font-size: 25px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos nav{
+  margin-top: 40px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos ul{
+  list-style: none;
+  padding: 0;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos ul li{
+  padding: 0;
+  margin-top: 45px;
+  margin-left: 15px;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos ul li a{
+  display: block;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 18px;
+  background: transparent;
+  border-radius: 5px;
+  border-right: 3px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: color 300ms;
+}
+
+.inicio-plataforma .lateral .barra-lateral .iconos .navegacion-lateral ul .hoverIconos {
+  background: white;
+  color: #3C40C6;
+}
+
+.inicio-plataforma .lateral .barra-lateral .textos .navegacion-textos ul .hoverTextos {
+  color: #3C40C6;
+  box-sizing: border-box;
+  border-right: 3px solid #3C40C6;
+}
+
+.inicio-plataforma .contenido-plataforma{
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CABECERA */
+/* Estilo básico para el botón */
+.cabecera {
+  width: 100%;
+  height: 50px;
+  border-left: 2px solid #d9dadb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecera .cabecera-iconos{
+  flex-basis: 20%;
+  display: flex;
+  justify-content: space-around;
+  color: #747577;
+}
+
+.cabecera .cabecera-iconos i {
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.cabecera .cabecera-iconos i:hover {
+  color: #3C40C6;
+}
+
+.cabecera .cabecera-perfil {
+  height: 100%;
+  display: flex;
+  margin-right: 20px;
+}
+
+.cabecera .cabecera-perfil .notificaciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+  border-left: 1px solid #d9dadb;
+  border-right: 1px solid #d9dadb;
+  margin-right: 15px;
+}
+
+.cabecera .cabecera-perfil .notificaciones i {
+  color: #3C40C6;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.cabecera .cabecera-perfil .notificaciones i:hover {
+  color: #6c757d;
+}
+
+.cabecera .cabecera-perfil .detalle-perfil {
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cabecera .cabecera-perfil .detalle-perfil p{
+  margin: 0;
+}
+
+.cabecera .cabecera-perfil .detalle-perfil .nombre{
+  font-weight: bolder;
+}
+
+.cabecera .cabecera-perfil .detalle-perfil .rol{
+  color: #6c757d;
+  font-size: 10px;
+}
+
+.cabecera .cabecera-perfil .foto-perfil{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-boton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%; 
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para la imagen dentro del botón */
+.imagen-boton img {
+  width: 100%; /* Ajusta el tamaño de la imagen al tamaño del botón */
+  height: auto;
+}
+
+/* Estilos del dashboard */
+.dashboard{
+  border-left: 2px solid #d9dadb;
+  border-top: 2px solid #d9dadb;
+  flex-grow: 1;
+  background-color: #E5E9EA;
+  padding: 20px;
+}
+
+.dashboard .controles-dashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard .selectores-dashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard .select-dashboard {
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-shadow: 3px 4px 2px #d9dadb;
+}
+
+.dashboard .select-dashboard .css-1u9des2-indicatorSeparator{
+  background-color: transparent;
+}
+
+.dashboard .modulos{
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dashboard .modulos .modulo {
+  flex-basis: 18%;
+  height: 175px;
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 5px 2px #d9dadb;
+}
+
+.dashboard .modulos .modulo img{
+  width: 55px;
+  height: 55px;
+  margin: 15px auto;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+
+.dashboard .modulos .modulo .card-body{
+  padding: 0;
+}
+
+.dashboard .modulos .modulo .card-title {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dashboard .modulos .modulo .card-body .acciones{
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard .modulos .modulo .card-body .acciones a:hover{
+  border: none;
+  background-color: #747577;
+}

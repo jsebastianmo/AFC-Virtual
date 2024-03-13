@@ -7,12 +7,12 @@ const FooterLanding = () => {
         <section className='container'>
             <section className='main py-4'>
                 <section className='seccion seccion-1'>
-                    <NavLink to='/principal' className="navbar-brand d-flex align-items-center gap-2">
+                    <NavLink to='/landing' className="navbar-brand d-flex align-items-center gap-2">
                         <i className="bi bi-journal-plus text-warning fs-1"></i>
                         <h5 className='fs-3 brand-title text-white'> AFC </h5>
                     </NavLink>
                     <p className='text-muted'> We have over 20 years experience providing expert Educational both businesses and individuals. Our Investment Committee brings cades the industry expertise in driving our investment approach. portfolio constructor and allocation </p>
-                    <NavLink className='btn btn-outline-secondary' to='/principal'> Ver más </NavLink>
+                    <NavLink className='btn btn-outline-secondary' to='/landing'> Ver más </NavLink>
                 </section>
                 <section className='seccion seccion-2'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> Cursos populares </h1>
@@ -52,22 +52,22 @@ const FooterLanding = () => {
                 <section className='seccion seccion-3'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> ENLACES RAPIDOS </h1>
                     <ul>
-                        <li> <NavLink to='/principal'> Todos los cursos </NavLink> </li>
-                        <li> <NavLink to='/principal'> Sesiones </NavLink> </li>
-                        <li> <NavLink to='/principal'> Examenes recientes </NavLink> </li>
-                        <li> <NavLink to='/principal'> Cursos profesionales </NavLink> </li>
-                        <li> <NavLink to='/principal'> Políticas de privacidad </NavLink> </li>
-                        <li> <NavLink to='/principal'> Términos de uso </NavLink> </li>
-                        <li> <NavLink to='/principal'> Contáctenos </NavLink> </li>
+                        <li> <NavLink to='/landing'> Todos los cursos </NavLink> </li>
+                        <li> <NavLink to='/landing'> Sesiones </NavLink> </li>
+                        <li> <NavLink to='/landing'> Examenes recientes </NavLink> </li>
+                        <li> <NavLink to='/landing'> Cursos profesionales </NavLink> </li>
+                        <li> <NavLink to='/landing'> Políticas de privacidad </NavLink> </li>
+                        <li> <NavLink to='/landing'> Términos de uso </NavLink> </li>
+                        <li> <NavLink to='/landing'> Contáctenos </NavLink> </li>
                     </ul>
                 </section>
                 <section className='seccion seccion-4'>
                     <h1 className='text-muted fs-5 pb-3 mb-4'> CONTÁCTENOS </h1>
                     <p className='text-muted'> Si quiere contactarnos sobre cualquier tema, nuestro soporte está disponible para ayudarlo </p>
                     <ul>
-                        <li> <NavLink to='/principal'> <i className="bi bi-geo-alt-fill bg-warning text-dark"></i> Address: 9015 Sunset Boulevard United Kingdom </NavLink> </li>
-                        <li> <NavLink to='/principal'> <i className="bi bi-telephone-fill bg-warning text-dark"></i> Call: <span> + 215 623 7532 </span> </NavLink> </li>
-                        <li> <NavLink to='/principal'> <i className="bi bi-envelope-fill bg-warning text-dark"></i> Email: <span> info@Studylms.com </span> </NavLink> </li>
+                        <li> <NavLink to='/landing'> <i className="bi bi-geo-alt-fill bg-warning text-dark"></i> Address: 9015 Sunset Boulevard United Kingdom </NavLink> </li>
+                        <li> <NavLink to='/landing'> <i className="bi bi-telephone-fill bg-warning text-dark"></i> Call: <span> + 215 623 7532 </span> </NavLink> </li>
+                        <li> <NavLink to='/landing'> <i className="bi bi-envelope-fill bg-warning text-dark"></i> Email: <span> info@Studylms.com </span> </NavLink> </li>
                     </ul>
                 </section>
             </section>

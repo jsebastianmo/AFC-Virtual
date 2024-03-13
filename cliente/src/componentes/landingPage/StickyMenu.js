@@ -6,8 +6,7 @@ const StickyMenu = () => {
     window.addEventListener('scroll', function() {
         var stickyElement = document.getElementById('myStickyElement');
         var scrollPosition = window.scrollY || window.pageYOffset;
-  
-        // Cambia la clase para cambiar el color de fondo al hacer scroll hacia abajo
+        
         if (scrollPosition > 0) {
           stickyElement.classList.add('sticky-scrolled');
         } else {
@@ -20,7 +19,7 @@ const StickyMenu = () => {
     <div className='sticky-top w-100' id='sticky'>
         <nav className="navbar navbar-expand-lg navbar-light position-absolute w-100" id='myStickyElement'>
             <div className="container container-fluid header-screens w-100">
-                <NavLink to='/principal' className="navbar-brand d-flex align-items-center justify-content-between gap-3">
+                <NavLink to='/landing' className="navbar-brand d-flex align-items-center justify-content-between gap-3">
                     <i className="bi bi-journal-plus text-warning fs-1 mr-4"></i>
                     <h5 className='fs-3 brand-title'> AFC </h5>
                 </NavLink>
@@ -30,22 +29,22 @@ const StickyMenu = () => {
                 <div className="collapse navbar-collapse ml-4" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link" aria-current="page">Inicio</NavLink>
+                            <NavLink to='/landing' className="nav-link" aria-current="page">Inicio</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link">Cursos</NavLink>
+                            <NavLink to='/landing' className="nav-link">Cursos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link">Eventos</NavLink>
+                            <NavLink to='/landing' className="nav-link">Eventos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link">Paginas</NavLink>
+                            <NavLink to='/landing' className="nav-link">Paginas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link">Tienda</NavLink>
+                            <NavLink to='/landing' className="nav-link">Tienda</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/principal' className="nav-link">Contacto</NavLink>
+                            <NavLink to='/landing' className="nav-link">Contacto</NavLink>
                         </li>
                     </ul>
                 </div>
