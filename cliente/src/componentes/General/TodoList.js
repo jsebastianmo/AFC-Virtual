@@ -10,8 +10,6 @@ const TodoList = () => {
 
   useEffect(() => {
     handleDrag();
-    contarTareas();
-
      // Añade un event listener para actualizar la cantidad de elementos cuando ocurre un evento de "drag and drop"
      document.addEventListener('dragend', contarTareas);
 
@@ -20,7 +18,11 @@ const TodoList = () => {
        document.removeEventListener('dragend', contarTareas);
      };
 
-  }, []);
+  });
+
+  useEffect(() => {
+    contarTareas();
+  })
 
   const handleDrag = () => {
     let draggedElement = null;
