@@ -33,7 +33,7 @@ const StickyMenu = () => {
                                 <NavLink to='/landing' className="nav-link" aria-current="page">Inicio</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre nosotros</NavLink>
+                                <NavLink to='/landing' className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre nosotros</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to='/landing' className="nav-link">Programa</NavLink>
