@@ -29,7 +29,7 @@ const Table = ({columns, data}) => {
     }
   )
 
-  const { getTableProps, getTableBodyProps, headerGroups, page, rows, canNextPage, canPreviousPage, pageOptions, gotoPage, pageCount, setPageSize, prepareRow, state, selectedFlatRows, setGlobalFilter } = tableInstance;
+  const { getTableProps, getTableBodyProps, headerGroups, page, rows, canNextPage, canPreviousPage, pageOptions, gotoPage, pageCount, setPageSize, prepareRow, state, setGlobalFilter } = tableInstance;
 
   const { globalFilter, pageIndex, pageSize } = state;
 
