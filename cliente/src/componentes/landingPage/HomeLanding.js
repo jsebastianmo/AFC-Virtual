@@ -11,7 +11,7 @@ const HomeLanding = () => {
                         <p className='fs-5 text-white'> Un ministerio de los Pastores Ricardo y Ma. Patricia Rodríguez </p>
                         <div className='d-flex gap-2 botones-carrusel'> 
                             <button className='btn btn-warning text-white btn-lg rounded-0'> Más Info </button>
-                            <button className='btn btn-light text-dark btn-lg rounden-0'> Inscribirma ya </button>
+                            <button className='btn btn-light text-dark btn-lg rounden-0'> Inscribirme ya </button>
                         </div>
                     </div>
                 </div>
