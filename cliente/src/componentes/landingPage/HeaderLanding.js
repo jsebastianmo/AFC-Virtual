@@ -13,10 +13,10 @@ const HeaderLanding = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item custom-border">
-                            <NavLink to='/landing' className="nav-link text-light" aria-current="page"> Cell: <span className='text-muted'>(+57) 311 4014773</span> </NavLink>
+                            <NavLink to='/landing' className="nav-link text-light" aria-current="page"> Cell: <span className='text-muted'>(+57) 319 4187615</span> </NavLink>
                         </li>
                         <li className="nav-item custom-border">
-                            <NavLink to='/landing' className="nav-link text-light ">Email: <span className='text-muted'>jhonsmosqueraocampo@gmail.com</span></NavLink>
+                            <NavLink to='/landing' className="nav-link text-light ">Email: <span className='text-muted'>afcvirtual@avivaiento.com</span></NavLink>
                         </li>
                     </ul>
                 </div>

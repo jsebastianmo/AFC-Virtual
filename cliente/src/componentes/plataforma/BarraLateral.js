@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 
 const BarraLateral = () => {
@@ -30,7 +30,7 @@ const BarraLateral = () => {
         nav2Links[index].classList.remove("hoverTextos");
       });
     });
-  }, [])
+  }, []);
 
   return (
     <section className='barra-lateral'>

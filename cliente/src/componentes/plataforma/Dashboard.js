@@ -46,71 +46,17 @@ const Dashboard = () => {
       accessor: 'id',
     },
     {
-      Header: 'Name',
-      accessor: 'name',
+      Header: 'Curso',
+      accessor: 'curso',
     },
     {
-      Header: 'Age',
-      accessor: 'age',
+      Header: 'Periodo',
+      accessor: 'periodo',
     },
     {
-      Header: 'Country',
-      accessor: 'country',
+      Header: 'Profesor',
+      accessor: 'profesor',
     },
-  ];
-  
-  const data = [
-    { id: 1, name: 'John', age: 30, country: 'USA' },
-    { id: 2, name: 'Doe', age: 25, country: 'Canada' },
-    { id: 3, name: 'Jane', age: 40, country: 'UK' },
-    { id: 4, name: 'Alice', age: 35, country: 'Colombia' },
-    { id: 5, name: 'Jhon', age: 15, country: 'Colombia' },
-    { id: 6, name: 'Sebastian', age: 25, country: 'Colombia' },
-    { id: 7, name: 'Mosquera', age: 24, country: 'Colombia' },
-    { id: 8, name: 'Ocampo', age: 56, country: 'Colombia' },
-    { id: 9, name: 'Laura', age: 87, country: 'Colombia' },
-    { id: 10, name: 'Valentina', age: 24, country: 'Colombia' },
-    { id: 11, name: 'Castañeda', age: 45, country: 'Colombia' },
-    { id: 12, name: 'Muñoz', age: 65, country: 'Colombia' },
-    { id: 13, name: 'Alan', age: 76, country: 'Colombia' },
-    { id: 14, name: 'Simon', age: 35, country: 'Colombia' },
-    { id: 15, name: 'Hector', age: 65, country: 'Colombia' },
-    { id: 16, name: 'Guillermo', age: 74, country: 'Colombia' },
-    { id: 17, name: 'Luz', age: 83, country: 'Colombia' },
-    { id: 18, name: 'Mery', age: 36, country: 'Colombia' },
-    { id: 19, name: 'Juan', age: 37, country: 'Colombia' },
-    { id: 20, name: 'Camilo', age: 46, country: 'Colombia' },
-    { id: 21, name: 'Daniel', age: 75, country: 'Colombia' },
-    { id: 22, name: 'Jeronimo', age: 23, country: 'Colombia' },
-    { id: 23, name: 'Lorem', age: 55, country: 'Colombia' },
-    { id: 24, name: 'Ipsum', age: 38, country: 'Colombia' },
-    { id: 25, name: 'Laura', age: 28, country: 'Colombia' },
-    { id: 26, name: 'Valentina', age: 30, country: 'Colombia' },
-    { id: 27, name: 'Jhon', age: 28, country: 'Colombia' },
-    { id: 28, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 29, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 30, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 31, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 32, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 33, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 34, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 35, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 36, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 37, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 38, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 39, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 40, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 41, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 42, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 43, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 44, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 45, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 46, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 47, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 48, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 49, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 50, name: 'Sebastian', age: 17, country: 'Colombia' },
-    { id: 51, name: 'Sebastian', age: 17, country: 'Colombia' },
   ];
 
   const handleVista = (vista) => {
@@ -166,7 +112,7 @@ const Dashboard = () => {
           )
           :
           (
-            <Table columns={columns} data={data}/>
+            <Table columns={columns} data={listaCursos}/>
           )
         }
       </section>

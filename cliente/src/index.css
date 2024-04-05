@@ -30,6 +30,68 @@
   cursor: pointer;
 }
 
+.activeLink{
+  background: #3C40C6;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.activeLink i{
+  color: white !important;
+}
+
+/* Efectos */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes trasladarAfuera {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes trasladarAdentro {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.menu {
+  opacity: 1; /* Asegúrate de que el menú sea visible inicialmente */
+}
+
+.hidden {
+  animation: trasladarAfuera 0.3s ease-in-out forwards;
+}
+
+.visible {
+  animation: trasladarAdentro 0.3s ease-in-out forwards;
+}
+
 /* Estilos del header del landing page */
 .custom-border {
     border: 1px solid #6c757d;
@@ -777,8 +839,58 @@
 /*  ESTILOS DE LA PLATAFORMA  */
 /* INICIO */
 .inicio-plataforma{
+  position: relative;
   width: 100%;
   display: flex;
+}
+
+.open-close-arrow{
+  position: absolute;
+  z-index: 100;
+  left: 19.5%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #3C40C6;
+  border: 2px solid #3C40C6;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.open-close:checked ~ .open-close-arrow{
+  background: #3C40C6;
+  color: white;
+  left: 2.5%;
+  transform: rotate(0deg);
+}
+
+.open-close:checked ~ .lateral{
+  flex-basis: 3%;
+}
+
+.open-close:checked ~ .lateral .barra-lateral{
+  width: 3%;
+}
+
+.open-close:checked ~ .lateral .barra-lateral .iconos{
+  width: 100%;
+}
+
+.open-close:checked ~ .lateral .barra-lateral .textos{
+  display: none;
+}
+
+.open-close:checked ~ .contenido-plataforma{
+  flex-basis: 100%;
+}
+
+.open-close:checked ~ .contenido-plataforma .cabecera .cabecera-iconos{
+  margin-left: 3%;
 }
 
 .inicio-plataforma .lateral{
@@ -786,6 +898,7 @@
   flex-basis: 20%;
   height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .inicio-plataforma .lateral .barra-lateral{
@@ -794,10 +907,13 @@
   left: 0;
   width: 20%;
   height: 100%;
-  display: flex;
+  border-right: 2px solid #d9dadb;
 }
 
 .inicio-plataforma .lateral .barra-lateral .iconos{
+  position: absolute;
+  left: 0;
+  width: 15%;
   height: 100%;
   background-color: #3C40C6;
   display: flex;
@@ -837,11 +953,14 @@
 }
 
 .inicio-plataforma .lateral .barra-lateral .textos{
-  flex-grow: 1;
+  position: absolute;
+  right: 0;
+  width: 85%;
   height: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  transition: all 300ms linear;
 }
 
 .titulo-textos{
@@ -911,7 +1030,7 @@
 .cabecera {
   width: 100%;
   height: 50px;
-  border-left: 2px solid #d9dadb;
+  border-bottom: 2px solid #d9dadb;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1012,8 +1131,6 @@
 
 /* Estilos del dashboard */
 .dashboard{
-  border-left: 2px solid #d9dadb;
-  border-top: 2px solid #d9dadb;
   flex-grow: 1;
   background-color: #E5E9EA;
   padding: 20px;
@@ -1093,4 +1210,335 @@
 .dashboard .modulos .modulo .card-body .acciones a:hover{
   border: none;
   background-color: #747577;
+}
+
+/* Estilos de la clase */
+.clase{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 8fr 3fr;
+  grid-template-rows: 100px minmax(0, 1fr);
+  grid-template-areas: "menu informacion chat"
+                       "menu contenido   chat";
+}
+
+.menu-clase{
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-right: 2px solid #d9dadb;
+}
+
+.menu-clase .icon-class{
+  font-size: 25px;
+  color: #3C40C6;
+}
+
+.menu-clase nav{
+  margin-top: 50px;
+}
+
+.menu-clase nav ul{
+  height: 400px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-clase nav ul li a{
+  text-decoration: none;
+}
+
+.informacion-clase{
+  grid-area: informacion;
+}
+
+.informacion-clase .informacion-clase-principal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 35px;
+  margin-top: 15px;
+  border-bottom: 2px solid #d9dadb;
+  padding-bottom: 20px;
+}
+
+.informacion-clase .informacion-clase-principal .anterior-clase{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.informacion-clase .informacion-clase-principal .anterior-clase i{
+  padding: 5px;
+  background: rgba(184, 182, 182, 0.2);
+  color: #1e1e1e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.informacion-clase .informacion-clase-principal .anterior-clase i:hover{
+  background-color: #3C40C6;
+  color: white;
+}
+
+.informacion-clase .informacion-clase-control{
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.informacion-clase .informacion-clase-control .siguiente-clase{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.informacion-clase .informacion-clase-control .siguiente-clase i{
+  padding: 5px;
+  background: rgba(184, 182, 182, 0.2);
+  color: #1e1e1e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.informacion-clase .informacion-clase-control .siguiente-clase i:hover{
+  background-color: #3C40C6;
+  color: white;
+}
+
+.informacion-clase .informacion-clase-control .siguiente-clase h1{
+  color: #3C40C6;
+  text-shadow: 0px 0px 0px #3C40C6,
+               2px 2px 5px #3C40C6;
+  cursor: pointer;
+}
+
+.informacion-clase .informacion-clase-control .siguiente-clase h1:hover{
+  color: #d9dadb;
+  text-shadow: 0px 0px 0px #d9dadb,
+               2px 2px 5px #d9dadb;
+}
+
+.contenido-clase{
+  grid-area: contenido;
+  width: 100%;
+}
+
+.contenido-clase .contenido-clase-material{
+  width: 90%;
+  margin: 35px auto;
+  position: relative;
+}
+
+.contenido-clase .contenido-clase-material video{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.contenido-clase .contenido-clase-material .progreso-video {
+  width: 100%;
+  height: 10px; /* Ajusta la altura */
+  background-color: #3C40C6;
+}
+
+.contenido-clase .contenido-clase-material .tiempo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.contenido-clase .contenido-clase-material .tiempo i {
+  color: red;
+}
+
+.contenido-clase .contenido-clase-material .tiempo span{
+  color: #292a2a;
+}
+
+.contenido-clase .contenido-clase-material .controles-video{
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d9dadb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .volumen .volumen-control{
+  /* width: 180px; */
+  padding: 10px;
+  border: 1px solid #d9dadb;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .volumen .volumen-control i{
+  color: #3C40C6;
+  font-size: 30px;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .volumen .volumen-control i:hover{
+  cursor: pointer;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .volumen .volumen-control input[type="range"] {
+  -webkit-appearance: none; /* Elimina la apariencia predeterminada para WebKit/Blink */
+    appearance: none;
+    height: 5px; /* Altura de la barra de progreso */
+    background: #ddd; /* Color de fondo de la barra de progreso */
+    outline: none; /* Elimina el contorno al hacer clic en algunos navegadores */
+    opacity: 0.7; /* Transparencia del control */
+    -webkit-transition: .2s; /* Transición suave al cambiar */
+    transition: opacity .2s;
+    background: #3C40C6;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px; /* Ancho del thumb */
+  height: 12px; /* Altura del thumb */
+  background: #3C40C6; /* Color de fondo del thumb a azul */
+  cursor: pointer;
+  border-radius: 50%; /* Hace el thumb cuadrado */
+}
+
+.controles-video .volumen .texto-volumen{
+  color: #d9dadb;
+  padding-left: 5px;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .pausa-subtitulos-completa{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contenido-clase .contenido-clase-material .controles-video .pausa-subtitulos-completa i{
+  cursor: pointer;
+  color: #3C40C6;
+  font-size: 30px;
+}
+
+.contenido-clase .todolist{
+  width: 100%;
+  margin: 25px auto;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #f2f3f5;
+}
+
+.contenido-clase .todolist .list{
+  width: 23%;
+}
+
+.contenido-clase .todolist .list h1{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contenido-clase .todolist .list .tasks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contenido-clase .todolist .list .tasks .card{
+  cursor: pointer;
+}
+
+.contenido-clase .todolist .list .tasks .card .acciones-tarea{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.contenido-clase .todolist .list .tasks .card .acciones-tarea a{
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.contenido-clase .todolist .list .tasks .card .acciones-tarea a span{
+  font-size: 12px;
+}
+
+.contenido-clase .evaluaciones-clase{
+  width: 90%;
+  margin: 50px auto;
+}
+
+.contenido-clase .recursos-clase{
+  width: 90%;
+  margin: 50px auto;
+}
+
+.contenido-clase .recursos-clase .recurso-clase{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contenido-clase .recursos-clase .recurso-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  gap: 10px;
+  transition: all 300ms linear;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.contenido-clase .recursos-clase .recurso-item i{
+  font-size: 45px;
+  color: #3C40C6;
+}
+
+.contenido-clase .recursos-clase .recurso-item p{
+  margin: 0;
+  color: #3C40C6;
+  transition: all 300ms linear;
+}
+
+.contenido-clase .recursos-clase .recurso-item:hover{
+  transform: scale(1.2);
+  background: rgba(184, 182, 182, 0.2);
+}
+
+.chat-clase{
+  grid-area: chat;
+  border-left: 2px solid #d9dadb;
 }

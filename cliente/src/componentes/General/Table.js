@@ -1,8 +1,11 @@
 import { useSortBy, useTable, useGlobalFilter, usePagination, useRowSelect } from 'react-table';
 import GlobalFilter from './GlobalFilter';
 import { Checkbox } from './Checkbox';
+import { useNavigate } from 'react-router-dom/dist';
 
 const Table = ({columns, data}) => {
+
+  const navegar = useNavigate();
   
   const tableInstance = useTable({
     columns: columns,
@@ -35,8 +38,7 @@ const Table = ({columns, data}) => {
   const endIndex = Math.min(startIndex + pageSize, pageOptions.length);
 
   const handleEdit = (id) => {
-    // Lógica para editar el elemento con el ID proporcionado
-    console.log('Editar elemento con ID:', id);
+    navegar("/clase/teologia");
   };
 
   const handleDelete = (id) => {
@@ -71,7 +73,7 @@ const Table = ({columns, data}) => {
                         {column.render('Header')} 
                         <span>
                           {
-                            column.isSorted ? (column.isSortedDesc ? (<i class="bi bi-caret-up-fill"></i>) : (<i class="bi bi-caret-down-fill"></i>)) : ''
+                            column.isSorted ? (column.isSortedDesc ? (<i className="bi bi-caret-up-fill"></i>) : (<i className="bi bi-caret-down-fill"></i>)) : ''
                           }
                         </span>
                       </th>
@@ -97,6 +99,7 @@ const Table = ({columns, data}) => {
                   }
                   <td>
                     {/* Botones de acción */}
+                    <button className='btn' onClick={() => handleEdit(row.original.id)} data-bs-toggle="tooltip" data-bs-placement="top" title="Ingresar"><i className="bi bi-box-arrow-right"></i></button>
                     <button className='btn' onClick={() => handleEdit(row.original.id)} data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i className="bi bi-pencil-square"></i></button>
                     <button className='btn' onClick={() => handleDelete(row.original.id)} data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar"><i className="bi bi-trash3-fill"></i></button>
                   </td>
