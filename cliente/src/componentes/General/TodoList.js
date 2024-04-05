@@ -18,11 +18,11 @@ const TodoList = () => {
        document.removeEventListener('dragend', contarTareas);
      };
 
-  });
+  }, []);
 
   useEffect(() => {
     contarTareas();
-  })
+  }, [])
 
   const handleDrag = () => {
     let draggedElement = null;
