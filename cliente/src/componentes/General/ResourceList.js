@@ -5,7 +5,7 @@ const ResourceList = ({ recursos }) => {
   return (
     <div className='recurso-clase'>
       {recursos.map((recurso, index) => (
-        <ResourceItem key={index} recurso={recurso} />
+        <ResourceItem key={index} recursoItem={recurso} />
       ))}
     </div>
   )

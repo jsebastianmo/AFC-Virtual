@@ -43,6 +43,7 @@ const BarraLateral = () => {
             <li> <NavLink to="/"> <i className="bi bi-calendar"></i> </NavLink> </li>
             <li> <NavLink to="/"> <i className="bi bi-file-earmark-excel"></i> </NavLink> </li>
             <li> <NavLink to="/"> <i className="bi bi-list-task"></i> </NavLink> </li>
+            <li> <NavLink to="calificaciones"> <i className="bi bi-card-checklist"></i> </NavLink> </li>
           </ul>
         </nav>
       </div>
@@ -57,6 +58,7 @@ const BarraLateral = () => {
             <li> <NavLink to="/"> Horario </NavLink> </li>
             <li> <NavLink to="/"> Tareas </NavLink> </li>
             <li> <NavLink to="/"> Evaluaciones </NavLink> </li>
+            <li> <NavLink to="calificaciones"> Calificaciones </NavLink> </li>
           </ul>
         </nav>
       </div>

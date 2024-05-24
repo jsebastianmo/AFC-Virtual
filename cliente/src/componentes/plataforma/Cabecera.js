@@ -23,9 +23,9 @@ const Cabecera = () => {
             <img src="https://picsum.photos/200/300" alt="Descripción de la imagen" />
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><NavLink className="dropdown-item" to="/">Action</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/">Another action</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/">Something else here</NavLink></li>
+            <li><NavLink className="dropdown-item" to="perfil/1">Perfil</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/">Configuración</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/">Cerrar sesión</NavLink></li>
           </ul>
         </div>
       </section>

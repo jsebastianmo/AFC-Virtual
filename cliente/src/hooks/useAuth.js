@@ -1,22 +1,6 @@
-import { useEffect, useState } from 'react'
+import  { useContext } from 'react'
+import { AuthContext } from '../contextos/AuthContext';
 
-const useAuth = () => {
-
-    const [ auth, setAuth ] = useState();
-
-    useEffect(()=>{
-        getAuth();
-    }, []);
-
-    const getAuth = async ()=>{
-        const token = "token de prueba";
-        setAuth(token);
-    };
-
-    return {
-        auth,
-      setAuth
-    }
-}
+const useAuth = () => useContext(AuthContext);
 
 export default useAuth;

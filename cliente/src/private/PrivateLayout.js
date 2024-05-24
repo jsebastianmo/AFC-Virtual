@@ -1,13 +1,14 @@
 import { Navigate, Outlet } from "react-router-dom";
 import PrivateMenu from "./PrivateMenu";
-import useAuthContext from "../hooks/useAuthContext";
+import useAuth from "../hooks/useAuth";
 
 const PrivateLayout = () => {
-    const { isUser } = useAuthContext();
+    const { token } = useAuth(); 
     return(
         <>
             {
-                isUser ? 
+                // !token ? 
+                token ?
                 (
                     <>
                         <PrivateMenu>
@@ -17,7 +18,7 @@ const PrivateLayout = () => {
                 )
                 :
                 (
-                    <Navigate to="/" />
+                    <Navigate to="/" replace/>
                 )
             }
         </>

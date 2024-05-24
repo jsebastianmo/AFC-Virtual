@@ -11,8 +11,6 @@ const RecursosClase = () => {
     { name: 'Recurso 5', type: 'imagen' },
   ])
 
-  setRecursos(recursos)
-
   return (
     <section className="contenido-clase">
         <div className="recursos-clase">

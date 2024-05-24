@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ResourceItem = ({ recurso }) => {
+const ResourceItem = ({ recursoItem }) => {
     const resourceIcons = {
         pdf: 'bi bi-file-earmark-pdf',
         excel: 'bi bi-file-earmark-spreadsheet',
@@ -11,8 +11,8 @@ const ResourceItem = ({ recurso }) => {
 
   return (
     <div className='recurso-item shadow'>
-      <i className={resourceIcons[recurso.type]}></i>
-      <p>{recurso.name}</p>
+      <i className={resourceIcons[recursoItem.type]}></i>
+      <p>{recursoItem.name}</p>
     </div>
   )
 }

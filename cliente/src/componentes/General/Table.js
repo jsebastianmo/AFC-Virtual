@@ -3,7 +3,7 @@ import GlobalFilter from './GlobalFilter';
 import { Checkbox } from './Checkbox';
 import { useNavigate } from 'react-router-dom/dist';
 
-const Table = ({columns, data}) => {
+const Table = ({columns, data, urlAcciones}) => {
 
   const navegar = useNavigate();
   
@@ -38,7 +38,7 @@ const Table = ({columns, data}) => {
   const endIndex = Math.min(startIndex + pageSize, pageOptions.length);
 
   const handleEdit = (id) => {
-    navegar("/clase/teologia");
+    navegar(`${urlAcciones.editar}/${id}`);
   };
 
   const handleDelete = (id) => {

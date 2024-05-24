@@ -1,20 +1,19 @@
 import { Navigate, Outlet } from "react-router-dom";
-import useAuthContext from "../hooks/useAuthContext";
+import useAuth from "../hooks/useAuth";
 
 const PublicLayout = () => {
-    const { isUser } = useAuthContext();
+    const { token } = useAuth();
     return(
         <>
             {
-                !isUser ? 
+                // !token ? 
+                !token ?
                 (
-                    <>
-                        <Outlet />
-                    </>
+                    <Outlet />
                 )
                 :
                 (
-                    <Navigate to="/home" />
+                    <Navigate to="/inicio" replace/>
                 )
             }
         </>

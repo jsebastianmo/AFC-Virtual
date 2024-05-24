@@ -11,9 +11,14 @@ import ContenidoClase from "../componentes/plataforma/clase/ContenidoClase";
 import ActividadesClase from "../componentes/plataforma/clase/ActividadesClase";
 import EvaluacionesClase from "../componentes/plataforma/clase/EvaluacionesClase";
 import RecursosClase from "../componentes/plataforma/clase/RecursosClase";
-import { AuthProvider } from "../contextos/AuthProvider";
+import { AuthProvider } from "../contextos/AuthContext";
 import PublicLayout from "../public/PublicLayout";
 import PrivateLayout from "../private/PrivateLayout";
+import Evaluacion from "../componentes/General/Evaluacion/Evaluacion";
+import MetadatosClase from "../componentes/plataforma/clase/MetadatosClase";
+import Calificaciones from "../componentes/plataforma/Calificaciones";
+import EstudiantesMateria from "../componentes/plataforma/EstudiantesMateria";
+import Perfil from "../componentes/plataforma/Perfil";
 
 const Routing = () => {
   return (
@@ -28,15 +33,20 @@ const Routing = () => {
                           <Route index element= { <Landing /> } />
                           <Route path="landing" element= { <Landing /> } />
                       </Route>
-                      <Route path="/inicio" element= { <PrivateLayout/> } >
+                      <Route path="inicio" element= { <PrivateLayout/> } >
                         <Route index element={<Inicio /> }/>
                         <Route path="acerca" element={<AcercaDe />} />
-                        <Route path="clase/:nombre" element={<Clase />}>
-                          <Route index element={<ContenidoClase />}/>
-                          <Route path="actividades" element={<ActividadesClase />}/>
-                          <Route path="evaluaciones" element={<EvaluacionesClase />}/>
-                          <Route path="recursos" element={<RecursosClase />}/>
+                        <Route path="informacion/:nombreClase" element={<MetadatosClase />} />
+                        <Route path="clase/:nombreClase" element={<Clase />}>
+                            <Route index element={<ContenidoClase />}/>
+                            <Route path="actividades" element={<ActividadesClase />}/>
+                            <Route path="evaluaciones" element={<EvaluacionesClase />}/>
+                            <Route path="recursos" element={<RecursosClase />}/>
                         </Route>
+                        <Route path="calificaciones" element={<Calificaciones />}/>
+                        <Route path="perfil/:id" element={<Perfil />}/>
+                        <Route path="estudiantes/:materia" element={<EstudiantesMateria />}/>
+                        <Route path="evaluacion/:materia/:nombre" element={<Evaluacion />} />
                       </Route>
                       <Route path="*" element = { <Pagina404 /> } />
                   </Routes>

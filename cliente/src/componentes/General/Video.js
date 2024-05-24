@@ -68,7 +68,7 @@ const Video = ({src}) => {
 
   return (
     <>
-      <video src={src} ref={videoRef} onTimeUpdate={handleTimeUpdate} onLoadedMetadata={handleLoadedMetadata}/>
+      <video src={src} ref={videoRef} onTimeUpdate={handleTimeUpdate} onLoadedMetadata={handleLoadedMetadata} controls/>
       <div className="tiempo">
             <i className="bi bi-record-circle-fill"></i>
             <span> {formatTime(currentTime)} / {formatTime(duration)} </span>
